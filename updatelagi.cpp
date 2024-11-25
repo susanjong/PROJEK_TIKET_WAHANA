@@ -97,7 +97,7 @@ void estimasiWaktuPerWahana(int pilihanWahana) {
 
 // Fungsi untuk melihat daftar aktivitas tambahan di menu utama
 void lihatDaftarFitur() {
-    cout << "--- Fitur Tambahan ---\n";
+    cout << "\n--- Fitur Tambahan ---\n";
     cout << "1. Cek Status di Wahana\n";
     cout << "2. Estimasi Waktu Tunggu Per Wahana\n";
     cout << "3. Lihat Log Aktivitas\n";
@@ -108,7 +108,7 @@ void lihatDaftarFitur() {
 // Tambahan di main menu
 void menuFiturTambahan() {
     while (true) {
-        system("cls");
+        
         lihatDaftarFitur();
         int pilihan;
         cin >> pilihan;
@@ -121,7 +121,7 @@ void menuFiturTambahan() {
             cekStatusDiWahana(nama);
         } else if (pilihan == 2) {
             int pilihanWahana;
-            cout << "--- Pilih Wahana ---\n";
+            cout << "\n--- Pilih Wahana ---\n";
             cout << "1. Halilintar\n";
             cout << "2. Hysteria\n";
             cout << "3. Arung Jeram\n";
@@ -392,14 +392,38 @@ int main() {
     int pilihan, pilihanWahana, opsiWahana, pil;
     string kegiatan, namaTiket;
     
-    system("cls");
-
     spasiInterface (1);
     Tutup();
     cout << "@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@|  Welcome to Dufan  |@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@\n";
     Tutup();
+
+     // Teks yang akan dipusatkan
+    string text = "Taman Impian Jaya Ancol, Jalan Lodan Timur Nomor 7, Ancol, Kecamatan Pademangan, Jakarta Utara.";
+
+    // Menentukan lebar terminal untuk teks
+    int terminal_width_text = 115;  // Lebar terminal untuk teks
+    int padding_text = (terminal_width_text - text.length()) / 2;
+
+    cout << endl;
+    cout << setw(padding_text + text.length()) << setiosflags(ios::right) << text << endl;
+cout << endl;
+cout << endl;
+
+    // Mendapatkan waktu saat ini
+    time_t ct = time(0);
+    string currenttime = ctime(&ct);
+
+    // Menghapus karakter newline ('\n') di akhir string waktu
+    currenttime.erase(currenttime.length() - 1);
+
+    // Menentukan lebar terminal untuk waktu
+    int terminal_width_time = 110;  
+    int padding_time = (terminal_width_time - currenttime.length()) / 2;
+
+    cout << setw(padding_time + currenttime.length()) << setiosflags(ios::right) << currenttime << endl;
     spasiInterface (1);
     spasiInterface (2);
+
     cout << "Press Any Button";
     getchar();
 
@@ -415,8 +439,8 @@ int main() {
 
         if (kegiatan == "1") {
             while (true) {
-                system("cls");
-                cout << "--- Daftar Wahana ---\n";
+               
+                cout << "\n--- Daftar Wahana ---\n";
                 cout << "1. Halilintar\n";
                 cout << "2. Hysteria\n";
                 cout << "3. Arung Jeram\n";
@@ -456,8 +480,8 @@ int main() {
         }
         else if (kegiatan == "2") {
             while (true) {
-                system("cls");
-                cout << "--- Sistem Pemesanan Tiket ---\n";
+                
+                cout << "\n--- Sistem Pemesanan Tiket ---\n";
                 cout << "1. Tambah Pesanan\n";
                 cout << "2. Batalkan Pesanan\n";
                 cout << "3. Lihat Pesanan yang Belum Diproses\n";
