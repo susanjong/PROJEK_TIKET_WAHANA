@@ -44,3 +44,8 @@ tambahPesanan: Fungsi untuk menambah pesanan tiket, baik tiket reguler maupun VI
 1. Pengguna dapat memilih fitur di menu utama, seperti membeli tiket (reguler atau VIP), mengecek status wahana, melihat estimasi waktu tunggu, atau melihat riwayat aktivitas.
 2. Pengguna yang ingin naik wahana dapat ditambahkan ke antrian wahana setelah mereka membeli tiket.
 3. Pengguna juga dapat membatalkan pesanan atau melihat jumlah antrian untuk setiap wahana.
+
+# Output dari program codingan ini 
+Untuk penjelasan lebih lanjutnya mengenai pembahasan codingannya dapat menonton video berikut ini serta output dari program ini 
+
+https://drive.google.com/file/d/1-GrXCZVcTAeULH6TLOLL2HgoZ-gDBroB/view?usp=sharing
